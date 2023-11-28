@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1 id="surveyHeading">Survey</h1>
+
+
+    <label for="soccerExperience">Have you ever played soccer? (Yes/No)</label>
+    <input type="text" id="soccerExperience" placeholder="Enter Yes or No">
+
+
+    <label for="likeSoccer">Do you like soccer? (Yes/No)</label>
+    <input type="text" id="likeSoccer" placeholder="Enter Yes or No">
+
+    <button onclick=checkExperienceAndLike()>Submit</button>
+
+    
+    <div id="result"></div>
+
+    <script>
+        var surveyHeading = document.getElementById('surveyHeading');
+        surveyHeading.style.color = "blue";
+        surveyHeading.style.backgroundColor = "yellow";
+
+        function checkExperienceAndLike() {
+            var userSoccerExperience = document.getElementById('soccerExperience').value.toLowerCase();
+            var userLikeSoccer = document.getElementById('likeSoccer').value.toLowerCase();
+            var resultElement = document.getElementById('result');
+
+            var experienceResponse = '';
+            var likeResponse = '';
+
+            if (userSoccerExperience === 'yes') {
+                experienceResponse = 'Of course, Soccer>>>';
+            } else if (userSoccerExperience === 'no') {
+                experienceResponse = 'You better get into it';
+            } else {
+                experienceResponse = 'enter "Yes" or "No".';
+            }
+
+            if (userLikeSoccer === 'yes') {
+                likeResponse = 'Soccer is better than any other sport.';
+            } else if (userLikeSoccer === 'no') {
+                likeResponse = 'Youre wrong.';
+            } else {
+                likeResponse = 'enter "Yes" or "No".';
+            }
+
+            resultElement.innerHTML = '<p>' + experienceResponse + '</p><p>' + likeResponse + '</p>';
+        }
+
+
+        document.addEventListener('keydown', handleKeyDown);
+        document.addEventListener('keyup', handleKeyUp);
+
+        function handleKeyDown(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                this.body.style.backgroundColor = getRandomColor();
+            }
+        }
+
+        function handleKeyUp(event) {
+            if (event.key === 'Enter') {
+                this.body.style.backgroundColor = "green";
+            }
+        }
+        
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        var instructionHeading = document.createElement("h1");
+        instructionHeading.textContent = "Press Enter to Change Color";
+        document.body.appendChild(instructionHeading);
+        
+    </script>
+
+</body>
+</html>

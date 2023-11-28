@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Cup</title>
+    <link rel="stylesheet" href="homepage.css">
+    
+</head>
+<body>
+    <img src="messi.jpg" id="photo">
+        <div class="top-left"><p>World Cup, formally FIFA World Cup, in football (soccer), <br>
+            quadrennial tournament of mens national teams that determines <br>
+            the sports world champion. It is likely the most popular sporting <br>
+            event in the world, drawing billions of television viewers every tournament. <br>
+            Countries worldwide compete vigorously, many years in advance, <br>
+            to host the lucrative event, and accusations of bribery connected <br>
+            to the awarding of hosting rights have long shadowed the tournament.</p></div>
+    </div>
+
+    <nav id="myNav">
+        <a href="homepage.html" target="_blank">Homepage</a>
+        <a href="topgoals.html" target="_blank">Top Goals</a>
+        <a href="majorteams.html">Major Teams</a>
+    </nav>
+
+    <script>
+        var newLink = document.createElement("a");
+        newLink.href = "userinput.html";
+        newLink.textContent = "What Do You Think?";
+        var nav = document.getElementById("myNav");
+        nav.appendChild(newLink);
+    </script>
+
+</body>
+</html>

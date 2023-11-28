@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+}
+
+p{
+    color: white;
+    position: relative;
+    float: right;
+    top: 100px;
+    right: 200px;
+}
+
+#ronaldoheadshot {
+    top: 50px;
+    width: 300px;
+    height: 300px;
+}
+
+#messiheadshot {
+    top: 50px;
+    width: 300px;
+    height: 300px;
+}
+
+#peleheadshot {
+    width: 300px;
+    height: 300px;
+}
+
+#romarioheadshot {
+    width: 300px;
+    height: 300px;
+}
+
+#puskasheadshot {
+    width: 300px;
+    height: 300px;
+}
+
+
+/* Nav Bar*/
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: green;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  nav a {
+    color: green;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: white;
+  }

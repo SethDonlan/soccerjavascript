@@ -1,0 +1,54 @@
+body {
+
+  font-family: Arial, sans-serif;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  border: 2px solid green;
+  padding: 10px;
+  background-color: white;
+}
+
+.team {
+  bottom: 500px;
+}
+
+
+p  {
+  color: white;
+}
+
+.bestplayer {
+  font-weight: bold;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav Bar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: green;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav a {
+  color: green;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: white;
+}
